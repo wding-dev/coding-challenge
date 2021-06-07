@@ -12,15 +12,18 @@ Output: 3
 
 
 def solution(s: str) -> int:
+
     substr = ""
-    substr_char_count = []
+    max_substr_length = 0
 
     for ele in s:
+
         if ele not in substr:
             substr = substr + ele
         else:
-            substr = ele
+            substr = substr[substr.index(ele)+1:] + ele
 
-        substr_char_count.append(len(substr))
+        if max_substr_length < len(substr):
+            max_substr_length = len(substr)
 
-    return max(substr_char_count)
+    return max_substr_length

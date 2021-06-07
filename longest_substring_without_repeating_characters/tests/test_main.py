@@ -10,7 +10,10 @@ from longest_substring_without_repeating_characters.main import solution
     ("pwwkew", 3),
     (" ", 1),
     ("ab", 2),
-    ("abcdefg", 7)
+    ("abcdefg", 7),
+    ("", 0),
+    ("dvdf", 3),
+    ("cc", 1)
 ])
 def test_solution(s, expected):
     assert solution(s) == expected
