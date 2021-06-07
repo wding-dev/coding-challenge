@@ -19,7 +19,8 @@ def solution(s: str) -> int:
         if ele not in substr:
             substr = substr + ele
         else:
-            substr_char_count.append(len(substr))
             substr = ele
+
+        substr_char_count.append(len(substr))
 
     return max(substr_char_count)
